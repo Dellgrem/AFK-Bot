@@ -1,0 +1,16 @@
+{
+  "name": "afk-bot",
+  "version": "1.0.0",
+  "description": "Simple mineflayer AFK bot.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Dellgrem",
+  "license": "ISC",
+  "dependencies": {
+    "mineflayer": "^4.5.1",
+    "mineflayer-auto-auth": "^2.0.0"
+  }
+}
