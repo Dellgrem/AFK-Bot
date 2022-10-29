@@ -15,21 +15,23 @@ monitor.on('down', (res) => console.log(`${res.website} it has died - ${res.stat
 monitor.on('stop', (website) => console.log(`${website} has stopped.`) );
 monitor.on('error', (error) => console.log(error));
 
-const bot = mineflayer.createBot({
+function createBot () {
+  const bot = mineflayer.createBot({
   host: process.env.SERVER_HOST,
   username: process.env.BOT_USERNAME,
   port: process.env.SERVER_PORT,
   version: process.env.BOT_VERSION,
   plugins: [AutoAuth],
   AutoAuth: process.env.BOT_PASSWORD
-})
+  })
 
-bot.on('login', () => {
-  console.log("Connected :D")
-})
+  bot.on('login', () => {
+    console.log("Connected :D")
+  })
 
-bot.on('kicked', createBot)
-bot.on('error', createBot)
-bot.on('end', createBot)
+  bot.on('kicked', console.log)
+  bot.on('error', console.log)
+  bot.on('end', createBot)
+}
 
 createBot()
