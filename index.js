@@ -28,5 +28,8 @@ bot.on('login', () => {
   console.log("Connected :D")
 })
 
-bot.on('kicked', console.log)
-bot.on('error', console.log)
+bot.on('kicked', createBot)
+bot.on('error', createBot)
+bot.on('end', createBot)
+
+createBot()
