@@ -7,7 +7,7 @@ const bot = mineflayer.createBot({
   port: process.env.SERVER_PORT,
   version: process.env.BOT_VERSION,
   plugins: [AutoAuth],
-  AutoAuth: 'password'
+  AutoAuth: process.env.BOT_PASSWORD
 })
 
 bot.on('login', () => {
