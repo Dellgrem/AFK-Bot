@@ -31,6 +31,11 @@ function createBot() {
   bot.loadPlugin(antiafk);
 
   bot.on("spawn", () => {
+    bot.autoEat.options = {
+      priority: "saturation",
+      startAt: 16,
+      bannedFood: ["golden_apple", "enchanted_golden_apple", "rotten_flesh"],
+    };
     bot.afk.setOptions({ fishing: false });
     bot.afk.start();
   });
