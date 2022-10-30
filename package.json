@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "mineflayer": "^4.5.1",
+    "mineflayer-antiafk": "^1.1.1",
     "mineflayer-auto-auth": "^2.0.0",
     "ping-monitor": "^0.6.2"
   },
@@ -22,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/Dellgrem/AFK-Bot/issues"
   },
-  "homepage": "https://github.com/Dellgrem/AFK-Bot#readme"
+  "homepage": "https://github.com/Dellgrem/AFK-Bot#readme",
+  "devDependencies": {}
 }
